@@ -29,9 +29,14 @@
         tools:layout="@layout/fragment_utama" >
         <action
             android:id="@+id/action_utama_to_second"
-            app:enterAnim="@anim/fade_in"
-            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/zoom_fade"
             app:destination="@id/second" />
+        <action
+            android:id="@+id/action_utama_to_fourd"
+            app:destination="@id/fourd" />
+        <action
+            android:id="@+id/action_utama_to_third"
+            app:destination="@id/third" />
     </fragment>
     <fragment
         android:id="@+id/second"
@@ -40,7 +45,18 @@
         tools:layout="@layout/fragment_second" >
         <action
             android:id="@+id/action_second_to_utama"
-            app:enterAnim="@anim/translate"
+            app:enterAnim="@anim/in_left"
+            app:exitAnim="@anim/out_right"
             app:destination="@id/utama" />
     </fragment>
+    <fragment
+        android:id="@+id/third"
+        android:name="com.erudev.animation.Third"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/fourd"
+        android:name="com.erudev.animation.Fourd"
+        android:label="fragment_fourd"
+        tools:layout="@layout/fragment_fourd" />
 </navigation>

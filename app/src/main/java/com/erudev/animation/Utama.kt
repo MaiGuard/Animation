@@ -19,6 +19,7 @@ class Utama : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         _binding = FragmentUtamaBinding.inflate(inflater)
         val view = binding.root
         return view
@@ -29,6 +30,13 @@ class Utama : Fragment() {
 
         binding.button1.setOnClickListener {
             navController.navigate(R.id.action_utama_to_second)
+        }
+        binding.button2.setOnClickListener {
+            navController.navigate(R.id.action_utama_to_third)
+        }
+        binding.button3.setOnClickListener {
+            navController.navigate(R.id.action_utama_to_fourd)
+
         }
     }
 
